@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash">
+
+    <include
+        android:id="@+id/container_header"
+        layout="@layout/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/date_subj"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_below="@+id/container_header"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/student_dateofbirth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_weight="5"
+
+            android:drawablePadding="@dimen/margin_10"
+
+            android:drawableRight="@drawable/time"
+
+            android:gravity="center_vertical|left"
+
+            android:paddingLeft="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_5"
+            android:text="12/03/2016"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+
+            />
+
+        <!--<Button
+            android:id="@+id/student_clearall_button"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:layout_marginRight="@dimen/margin_5"
+            android:background="@drawable/button_book_service_yellow"
+            android:textColor="@color/button_text_color"
+            android:text="@string/delete_all"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/sp_14"
+            />-->
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_subj"
+        android:layout_marginTop="@dimen/margin_5">
+
+        <LinearLayout
+            android:id="@+id/MainTop"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:weightSum="10"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/liner_frist"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_weight="5"
+                android:background="@color/yellow"
+                android:orientation="horizontal"
+
+                >
+
+                <ImageView
+                    android:id="@+id/ImageView_branch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/margin_5"
+
+                    android:src="@drawable/branchloca" />
+
+                <Spinner
+                    android:id="@+id/spinner_branch"
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.0" />
+
+                <ImageView
+                    android:id="@+id/ImageView_stand"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/standerd" />
+
+                <Spinner
+                    android:id="@+id/spinner_stand"
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liner_sec"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:background="@color/yellow"
+                android:orientation="horizontal"
+
+                >
+
+                <ImageView
+                    android:id="@+id/ImageView_batch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/bathe" />
+
+                <Spinner
+                    android:id="@+id/spinner_batch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="2.0" />
+
+                <ImageView
+                    android:id="@+id/ImageView_subj"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/subjectstile" />
+
+                <!--<Spinner    android:id="@+id/spinner_subj"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:background="@color/white"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="2.0"/>-->
+                <com.mobilesutra.feetrackerclass.activities.MultiSelectionSpinner
+                    android:id="@+id/spinner_subj"
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.0" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/subj_att"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_below="@+id/MainTop"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/text_titile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+
+                android:drawablePadding="@dimen/margin_5"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_10"
+
+                android:paddingRight="@dimen/margin_5"
+                android:text="@string/attendance_subject_for"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+
+                />
+
+            <Spinner
+                android:id="@+id/spinner_subjjj"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow" />
+
+
+        </LinearLayout>
+
+        <!--<ListView-->
+        <!--android:id="@+id/list"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:layout_below="@+id/subj_att"-->
+        <!--android:dividerHeight="1dp"-->
+        <!--android:divider="@color/grey_500"-->
+        <!--android:layout_marginTop="5sp"-->
+        <!--android:paddingBottom="5dp" >-->
+        <!--</ListView>-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="330dp"
+
+            android:layout_below="@+id/subj_att"
+            android:layout_marginTop="5sp"
+            android:divider="@color/grey_500"
+            android:dividerHeight="1dp"
+            android:paddingBottom="5dp"
+
+
+            ></android.support.v7.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/linearlayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:padding="2dp">
+
+        <Button
+            android:id="@+id/SendWothoutsms"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_book_service_yellow"
+            android:text="@string/send_without_sms"
+            android:textColor="@color/button_text_color" />
+
+        <Button
+            android:id="@+id/Send"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_book_service_yellow"
+            android:text="@string/send_with_sms"
+            android:textColor="@color/button_text_color" />
+    </LinearLayout>
+
+
+    <com.mobilesutra.feetrackerclass.FAB.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearlayout1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="26dp"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+
+        <com.mobilesutra.feetrackerclass.FAB.FloatingActionButton
+            android:id="@+id/student_clearall_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_white_24dp"
+            fab:fab_title="@string/delete_all" />
+
+
+        <!--<Button
+            android:id="@+id/student_clearall_button"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:layout_marginRight="@dimen/margin_5"
+            android:background="@drawable/button_book_service_yellow"
+            android:textColor="@color/button_text_color"
+            android:text="@string/delete_all"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/sp_14"
+            />-->
+
+    </com.mobilesutra.feetrackerclass.FAB.FloatingActionsMenu>
+
+</RelativeLayout>

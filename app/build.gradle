@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 29
+    buildToolsVersion '29.0.0'
+
+    defaultConfig {
+        applicationId "com.mobilesutra.feetrackerclass"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 40
+        versionName "6.6"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    android {
+        lintOptions{
+            abortOnError false
+        }
+    }
+    /*applicationVariants.all { Variant ->
+        Variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent, "Fee_Tracker-" + buildType.name + "-v" +
+                    defaultConfig.versionCode + ".apk");
+        }
+
+    }*/
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'src/main/res/assets/', 'src/main/assets/']
+            res.srcDirs = ['src/main/res', 'src/main/res/values-v21']
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    //    compile 'org.apache.httpcomponents:httpcore:4.4.1'
+    //    compile "org.apache.httpcomponents:httpmime:4.2.1"
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+   // compile 'com.google.android.gms:play-services-gcm:7.3.0'
+    compile 'com.google.android.gms:play-services-gcm:10.2.1'
+
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    /*compile 'com.android.support:design:24.2.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.android.support:cardview-v7:24.2.0'*/
+   // compile 'com.helpshift:android-helpshift-support-aar:4.4.0-support'
+    compile 'com.anjlab.android.iab.v3:library:1.0.44'
+    compile 'org.jsoup:jsoup:1.10.2'
+   // compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+
+}

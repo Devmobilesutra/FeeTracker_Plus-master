@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:elevation="0dp"
+        android:orientation="vertical"
+        card_view:cardCornerRadius="@dimen/card_corner_radius"
+        card_view:cardElevation="@dimen/margin_10">
+
+        <RelativeLayout
+            android:id="@+id/rel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/l2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_margin="@dimen/margin_10"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp"
+                        android:id="@+id/ivProfile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="10"
+                        android:src="@drawable/ic_person_grey600_24dp">
+                    </de.hdodenhof.circleimageview.CircleImageView>
+
+                    <TextView
+                        android:id="@+id/auto_id"
+                        android:layout_toRightOf="@+id/ivProfile"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:padding="@dimen/margin_5"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black_color75" />
+
+                    <TextView
+                        android:id="@+id/sname"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_toLeftOf="@+id/stud_date"
+                        android:layout_toRightOf="@+id/auto_id"
+                        android:padding="@dimen/margin_5"
+                        android:text="@string/Student_Name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black_color75" />
+
+                    <TextView
+                        android:id="@+id/stud_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/margin_5"
+                        android:text="@string/Date"
+                        android:textColor="@color/black_color75"
+
+                        android:textSize="@dimen/sp_18" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/l1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/l2">
+
+                    <TextView
+                        android:id="@+id/branch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_marginTop="5dp"
+                        android:padding="2dp"
+                        android:text="branch"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black_color75" />
+
+                    <TextView
+                        android:id="@+id/stand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/branch"
+                        android:padding="2dp"
+                        android:text="stand"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black_color75" />
+
+                    <TextView
+                        android:id="@+id/batch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/stand"
+                        android:padding="2dp"
+                        android:text="batch"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black_color75" />
+
+                    <TextView
+                        android:id="@+id/subjects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/batch"
+                        android:padding="2dp"
+                        android:text="subj"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black_color75" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/l3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:layout_below="@+id/l1"
+                    android:background="@color/selected_gray"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+
+                    <ImageView
+                        android:id="@+id/img_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/ic_create_black_24dp" />
+
+                    <LinearLayout
+                        android:id="@+id/l5"
+                        android:layout_width="0dp"
+
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:gravity="end">
+
+                        <TextView
+                            android:id="@+id/totfee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_toLeftOf="@+id/seperator"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/Total_fee"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/black_color75"
+                            android:textSize="@dimen/margin_15"/>
+
+                        <TextView
+                            android:id="@+id/seperator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/total"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="10dp"
+                            android:text="/"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/black_color75"
+                            android:textSize="@dimen/margin_15"/>
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/margin_5"
+                            android:gravity="end"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/Total_fee"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/black_color75"
+                            android:textSize="@dimen/margin_15"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            -->
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_5"
+            android:layout_below="@+id/l3"
+            android:background="@android:color/transparent"></View>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

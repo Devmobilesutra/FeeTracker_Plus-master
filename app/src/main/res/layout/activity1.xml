@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back_dash"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/toolbar_actionbar1"
+        layout="@layout/header2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar_actionbar1"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_dash">
+
+            <!-- Login Form -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_10">
+
+                <!-- Email Label -->
+
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_username"
+                    android:textColor="@color/black_color75"
+                    android:textSize="@dimen/sp_16"
+                    />
+
+
+                <EditText
+                    android:id="@+id/txtUname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/margin_40"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:gravity="center"
+                    android:inputType="textWebEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/black_color75" />
+                <!--     android:text="gloriousgroup1567@gmail.com" -->
+
+                <TextView
+                    android:id="@+id/text_pass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_Password"
+                    android:textColor="@color/black_color75"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/txtPwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:password="true"
+                    android:singleLine="true"
+
+                    android:textColor="@color/black_color75" />
+                <!--     android:text="21732"  -->
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="@string/login_ShowPassword"
+                    android:textColor="@color/black_color75"
+                    />
+                <!-- Login button -->
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/button_book_service_yellow"
+                    android:text="@string/login"
+                    android:textColor="@color/button_text_color"
+                    android:textSize="@dimen/sp_16"
+                    />
+
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/button_book_service_yellow"
+                    android:text="@string/cancel"
+                    android:textColor="@color/button_text_color"
+                    android:textSize="@dimen/sp_16"
+
+                    />
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/button_book_service_yellow"
+                    android:text="Registeration"
+                    android:textColor="@color/button_text_color"
+                    android:textSize="@dimen/sp_16" />
+
+                <Button
+                    android:id="@+id/btnForgotPass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/button_book_service_yellow"
+                    android:text="@string/forgotpassword"
+                    android:textColor="@color/button_text_color"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+            <!-- Login Form Ends -->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

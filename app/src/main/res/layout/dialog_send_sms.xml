@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_dash"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_10">
+
+
+    <!-- <TextView
+         android:id="@+id/title"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/add_fee"
+         android:background="@android:color/transparent"
+         android:textColor="@color/white"
+         android:layout_marginTop="@dimen/margin_20"
+         android:gravity="center_vertical|center_horizontal"
+         android:textSize="@dimen/sp_22"
+         />-->
+
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@android:color/transparent"
+        android:gravity="start|center"
+        android:text=""
+        android:textColor="@color/black_color75"
+        android:textSize="@dimen/sp_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/back_dash"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+
+        <CheckBox
+            android:id="@+id/ch_student"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Student"
+            android:textColor="@color/black_color75"
+            android:checked="false"/>
+
+        <CheckBox
+            android:id="@+id/ch_parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Parent"
+            android:textColor="@color/black_color75"
+            android:checked="false"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_book_service_yellow"
+            android:text="@string/Cancel"
+            android:textColor="@color/heading_text_color" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_book_service_yellow"
+            android:text="OK"
+            android:textColor="@color/heading_text_color" />
+    </LinearLayout>
+
+
+</LinearLayout>

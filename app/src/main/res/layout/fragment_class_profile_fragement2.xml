@@ -1,0 +1,413 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    tools:context="com.mobilesutra.feetrackerclass.activities.Class_profile_fragemen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+
+            >
+
+
+            <TextView
+                android:id="@+id/tvTips"
+                android:layout_margin="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Fill all Branches, Standards, Batches and Subjects and then click DEFINE FEES Button at the bottom"
+                />
+
+            <RelativeLayout
+                android:layout_below="@+id/tvTips"
+                android:id="@+id/rel_branch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               >
+
+
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/profil_view"
+                    android:layout_marginLeft="@dimen/profil_view"
+                    android:layout_marginRight="@dimen/profil_view"
+                    android:layout_marginTop="@dimen/profil_bottom_margin"
+
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_branch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/liner_height_40"
+                    android:layout_below="@+id/divider2"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/branch_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/branchloca"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/branch"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/edit_branch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="@color/white"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="@string/addloc"
+                        android:paddingLeft="@dimen/padding_2dp"
+                        android:textColor="@color/heading_text_color"
+                        android:textColorHint="@color/heading_text_color"
+                        android:textSize="@dimen/sp_14"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/btn_branch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/box_color"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_2dp"
+                        android:src="@drawable/pluss"
+                        android:textSize="@dimen/sp_14"
+
+                        />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearlayout_branch"
+                    android:layout_marginBottom="@dimen/profil_bottom_margin"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/relsample"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider1"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"></LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_branch">
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/profil_view"
+                    android:layout_marginLeft="@dimen/profil_view"
+                    android:layout_marginRight="@dimen/profil_view"
+                    android:layout_marginTop="@dimen/profil_bottom_margin"
+
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_level"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/liner_height_40"
+                    android:layout_below="@+id/divider3"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/level_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/standerd"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/Level"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/edit_level"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="@color/white"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="@string/addlevel"
+                        android:paddingLeft="@dimen/padding_2dp"
+                        android:textColor="@color/heading_text_color"
+                        android:textColorHint="@color/heading_text_color"
+                        android:textSize="@dimen/sp_14"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/btn_level"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/box_color"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_2dp"
+                        android:src="@drawable/pluss"
+                        android:textColor="@color/red_700"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearlayout_level"
+                    android:layout_marginBottom="@dimen/profil_bottom_margin"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/sample_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider4"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"></LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_batch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_level">
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/profil_view"
+                    android:layout_marginLeft="@dimen/profil_view"
+                    android:layout_marginRight="@dimen/profil_view"
+                    android:layout_marginTop="@dimen/profil_bottom_margin"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_batch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/liner_height_40"
+                    android:layout_below="@+id/divider5"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/batch_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/bathe"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/batch"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/edit_batch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="@color/white"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="@string/addbatch"
+                        android:paddingLeft="@dimen/padding_2dp"
+                        android:textColor="@color/heading_text_color"
+                        android:textColorHint="@color/heading_text_color"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/btn_batch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/box_color"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_2dp"
+                        android:src="@drawable/pluss"
+
+                        android:textColor="@color/red_700"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearlayout_batch"
+                    android:layout_marginBottom="@dimen/profil_bottom_margin"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/sample_batch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider6"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"></LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_batch">
+
+                <View
+                    android:id="@+id/divide7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/profil_view"
+                    android:layout_marginLeft="@dimen/profil_view"
+                    android:layout_marginRight="@dimen/profil_view"
+                    android:layout_marginTop="@dimen/profil_bottom_margin"
+
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_sub"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/liner_height_40"
+                    android:layout_below="@+id/divide7"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/subj_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@android:color/transparent"
+
+                        android:drawableLeft="@drawable/subjectstile"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/subject"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/edit_subj"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="@color/white"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:gravity="center_vertical"
+                        android:hint="@string/addsubj"
+                        android:paddingLeft="@dimen/padding_2dp"
+                        android:textColor="@color/heading_text_color"
+                        android:textColorHint="@color/heading_text_color"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/btn_subj"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/box_color"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/padding_2dp"
+                        android:src="@drawable/pluss"
+                        android:textSize="@dimen/sp_14"
+
+                        />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearlayout_sub"
+                    android:layout_marginBottom="@dimen/profil_bottom_margin"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/sample_subj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider8"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"></LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_sub"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_book_service_yellow"
+                android:gravity="center"
+                android:text="Submit and Define Fees"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/define_class"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_update"
+                android:layout_marginBottom="10dp"
+                android:background="@color/update_box"
+                android:gravity="center"
+                android:text="Submit and Define A Class"
+                android:textColor="@color/black_color75"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

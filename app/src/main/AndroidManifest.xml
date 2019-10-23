@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobilesutra.feetrackerclass">
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+   <!-- <uses-permission android:name="android.permission.SEND_SMS" />-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:required="false" />
+
+    // You need below permission to read contacts
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <application
+        android:name="com.mobilesutra.feetrackerclass.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.Splash"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.Login"
+            android:label="@string/app_name"
+             />
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.Register"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.StudManagement"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.StudentListInFeeMgmt"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.StudentFeeStructure"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.FeeSummary"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.InsertNotice"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.SelectiveNotice"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.StudentAttendanceList"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.ActivityDashboard"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.Tour.ProductTour3Activity"
+            android:label="@string/title_activity_product_profile"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.Activity_profileNew"
+            android:label="@string/title_activity_activity_profile_new"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.ClickActivity"
+            android:label="@string/title_activity_click"
+            android:theme="@style/Theme.Translucent"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.Click_activity2"
+            android:label="@string/title_activity_click_activity2"
+            android:theme="@style/Theme.Translucent"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.addStudent"
+            android:label="@string/title_activity_add_student"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.Send_sms"
+            android:label="@string/title_activity_send_sms"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.Add_attendance"
+            android:label="@string/title_activity_add_attendance"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.Backup_New"
+            android:label="@string/title_activity_backup__new"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.ErrorHandler.ErrorActivity"
+            android:label="@string/title_activity_error"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.faq"
+            android:label="@string/title_activity_faq"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.ActivitySMS"
+            android:windowSoftInputMode="adjustPan"
+            android:label="@string/title_activity_send_sms"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.ActivityStudentManagementList"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.ActivityFeeManagement"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name="com.mobilesutra.feetrackerclass.activities.ActivityAttendance"
+            android:label="@string/app_name"></activity>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    tools:context="com.mobilesutra.feetrackerclass.activities.ActivityAttendance">
+
+    <include
+        android:id="@+id/toolbar_attendance"
+        layout="@layout/toolbar_attendance"/>
+
+    <TextView
+        android:id="@+id/txt_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar_attendance"
+        android:drawablePadding="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_5"
+        android:paddingLeft="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5"
+        android:drawableRight="@drawable/time"
+        android:text="12/03/2016"
+        android:gravity="center_vertical|left"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"/>
+
+    <LinearLayout
+        android:id="@+id/linear_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_date_picker"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:background="@color/yellow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/branchloca" />
+
+        <Spinner
+            android:id="@+id/spnr_branch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/standerd" />
+
+        <Spinner
+            android:id="@+id/spnr_stand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_seccond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_first"
+        android:background="@color/yellow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/bathe" />
+
+        <Spinner
+            android:id="@+id/spnr_batch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/subjectstile" />
+
+        <com.mobilesutra.feetrackerclass.activities.MultiSelectionSpinner
+            android:id="@+id/mspnr_subject"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_student"
+        android:layout_below="@+id/linear_seccond"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearlayout1"
+        android:paddingTop="5dp"/>
+    <com.mobilesutra.feetrackerclass.FAB.FloatingActionsMenu
+        android:id="@+id/fab_menu_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearlayout1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="26dp"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+
+        <com.mobilesutra.feetrackerclass.FAB.FloatingActionButton
+            android:id="@+id/fab_clear_attendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_white_24dp"
+            fab:fab_title="@string/delete_all"
+            />
+    </com.mobilesutra.feetrackerclass.FAB.FloatingActionsMenu>
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:padding="2dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/SendWothoutsms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/button_book_service_yellow"
+            android:textColor="@color/button_text_color"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/Send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/button_text_color"
+            android:background="@drawable/button_book_service_yellow"
+            android:text="@string/send_with_sms"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btnBuy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/button_text_color"
+            android:background="@drawable/button_book_service_yellow"
+            android:text="@string/send_with_sms" />
+    </LinearLayout>
+
+</RelativeLayout>

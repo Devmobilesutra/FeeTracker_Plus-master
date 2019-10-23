@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    tools:context="com.mobilesutra.feetrackerclass.activities.ActivityFeeManagement">
+
+
+    <include
+        android:id="@+id/toolbar_fee_management"
+        layout="@layout/toolbar_fee_management" />
+
+    <EditText
+        android:id="@+id/edit_student_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_fee_management"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="@string/search"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linear_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_student_search"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:background="@color/yellow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/branchloca" />
+
+        <Spinner
+            android:id="@+id/spnr_branch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/standerd" />
+
+        <Spinner
+            android:id="@+id/spnr_stand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/liner_seccond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_first"
+        android:background="@color/yellow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/bathe" />
+
+        <Spinner
+            android:id="@+id/spnr_batch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/subjectstile" />
+
+        <Spinner
+            android:id="@+id/spnr_subject"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner_seccond"
+        android:layout_marginTop="@dimen/margin_10"
+        android:dividerHeight="1dp" />
+
+    <com.mobilesutra.feetrackerclass.FAB.FloatingActionsMenu
+        android:id="@+id/fab_menu_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+
+        <com.mobilesutra.feetrackerclass.FAB.FloatingActionButton
+            android:id="@+id/fab_fee_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rup"
+            fab:fab_title="@string/view_summary"/>
+
+    </com.mobilesutra.feetrackerclass.FAB.FloatingActionsMenu>
+
+</RelativeLayout>

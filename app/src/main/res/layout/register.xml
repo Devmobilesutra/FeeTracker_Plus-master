@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/container_header"
+        layout="@layout/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/container_header"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+
+
+        android:visibility="invisible"
+        android:text="@string/Registration"
+        android:textColor="@color/black_color75"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_submit"
+        android:layout_below="@+id/profile"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:id="@+id/class_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+              >
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/title" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:gravity="center" -->
+                <!-- android:text="New Class Details" -->
+                <!-- android:textColor="#000099" -->
+                <!-- android:textSize="18sp" -->
+                <!-- android:textStyle="normal" /> -->
+
+
+                <!-- <View -->
+                <!-- android:id="@+id/diveder1" -->
+                <!-- android:layout_width="fill_parent" -->
+                <!-- android:layout_height="2dp" -->
+                <!-- android:layout_below="@+id/title" -->
+                <!-- android:layout_marginTop="@dimen/margin_5" -->
+                <!-- android:background="#000099" /> -->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_classname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    android:paddingTop="@dimen/margin_15"
+                 >
+
+                    <EditText
+                        android:id="@+id/ed_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/eneter_class_name"
+                        android:padding="@dimen/margin_5"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black_color75"
+                        ></EditText>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_mobno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    android:layout_below="@+id/input_layout_classname"
+                    android:paddingTop="@dimen/margin_10">
+
+                    <EditText
+                        android:id="@+id/ed_mob_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/EnterContactNo"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="@dimen/margin_5"
+                        android:textColor="@color/black_color75"
+
+                        android:textSize="@dimen/sp_16"></EditText>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_mobno"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    android:paddingTop="@dimen/margin_10">
+
+                    <EditText
+                        android:id="@+id/ed_emailid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/EnterEmailID"
+                        android:padding="@dimen/margin_5"
+                        android:textColor="@color/black_color75"
+
+                        android:textSize="@dimen/sp_16"></EditText>
+                </android.support.design.widget.TextInputLayout>
+                <!-- <EditText -->
+                <!-- android:id="@+id/ed_state" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:padding="@dimen/margin_5" -->
+                <!-- android:layout_marginTop="12dp" -->
+                <!-- android:layout_below="@+id/ed_emailid" -->
+                <!-- android:hint="Enter State"> -->
+                <!-- </EditText> -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@+id/input_layout_email"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    android:paddingTop="@dimen/margin_10">
+
+                    <EditText
+                        android:id="@+id/ed_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Enteraddress"
+                        android:padding="@dimen/margin_5"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/update_box"
+
+                        tools:ignore="UnknownIdInLayout"></EditText>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_address"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    android:paddingTop="@dimen/margin_10">
+
+                    <EditText
+                        android:id="@+id/ed_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Entercity"
+                        android:padding="@dimen/margin_5"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/black_color75"
+
+                        tools:ignore="UnknownIdInLayout"></EditText>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout1"
+                    android:layout_below="@+id/input_layout_city"
+
+                    android:paddingTop="@dimen/margin_10">
+
+                    <EditText
+                        android:id="@+id/ed_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_book_service_yellow"
+                        android:gravity="start"
+                        android:hint="@string/description"
+                        android:maxLines="3"
+                        android:minLines="3"
+                        android:padding="@dimen/margin_5"
+                        android:textColor="@color/black_color75"
+
+                        android:textSize="@dimen/sp_16"
+                        tools:ignore="UnknownIdInLayout"></EditText>
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@drawable/button_book_service_yellow"
+        android:padding="@dimen/margin_5"
+        android:textSize="@dimen/sp_16"
+        android:layout_margin="@dimen/margin_5"
+        android:text="@string/submit"
+        android:textColor="@color/button_text_color" />
+
+</RelativeLayout>

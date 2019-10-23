@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+
+    android:background="@drawable/back_dash"
+
+   >
+
+    <FrameLayout
+        android:id="@+id/images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:clipChildren="false"
+        android:layout_marginTop="40dp">
+        <ImageView
+            android:id="@+id/welcome_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_gravity="center"
+           />
+
+    </FrameLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="70dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+   >
+
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/info_1text1"
+        android:textSize="50sp"
+        android:textStyle="bold"
+         />
+
+    <TextView
+        android:id="@+id/heading2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+android:layout_below="@+id/heading"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/info_1text2"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/content"
+        android:text="@string/info_1text3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:textSize="30dp"
+        android:textColor="@color/white"
+
+        android:layout_below="@+id/heading2"
+        android:gravity="top|center_horizontal"
+
+        android:textAppearance="@style/WelcomeContentAppearance" />
+
+</RelativeLayout>
+</LinearLayout>

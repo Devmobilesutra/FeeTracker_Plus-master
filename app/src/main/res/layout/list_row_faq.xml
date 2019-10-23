@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/history_margin_top_bottom"
+        android:layout_marginBottom="@dimen/history_margin_top_bottom"
+        android:layout_marginLeft="@dimen/history_margin_right_left"
+        android:layout_marginRight="@dimen/history_margin_right_left"
+        android:clickable="false"
+        app:cardElevation="@dimen/card_elavation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <!--  <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="@dimen/date_history_marging">
+
+                <TextView
+                    android:id="@+id/txt_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="April"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_body_7" />
+
+                <TextView
+                    android:id="@+id/txt_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="21"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_body_8" />
+            </LinearLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/rl_order_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <TextView
+                    android:id="@+id/txt_quetion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/txt_history_marging"
+                    android:text="Notice Title"
+                    android:textSize="@dimen/text_body1"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txt_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_quetion"
+                    android:padding="@dimen/txt_history_marging"
+                    android:text="To promote high quality scientific education, research and training, Ministry of Human Resource Development (MHRD), Government of India, has set up seven Indian Institutes of Science Education and Research (IISERs) at Berhampur, Bhopal, Kolkata, Mohali, Pune, Thiruvananthapuram and Tirupati."
+                    android:textSize="@dimen/text_body1"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

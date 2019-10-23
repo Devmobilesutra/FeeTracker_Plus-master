@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_15"
+    android:paddingLeft="@dimen/margin_15"
+    android:paddingRight="@dimen/margin_15">
+
+
+
+    <android.support.v7.widget.CardView
+    android:id="@+id/cardview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+
+        card_view:cardElevation="20dp"
+        card_view:cardCornerRadius="@dimen/card_corner_radius"
+
+    >
+
+
+        <RelativeLayout android:layout_height="wrap_content"
+            android:id="@+id/rel_main"
+            android:layout_width="match_parent"
+
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:background="@color/white">
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border_white"
+                android:weightSum="10"
+                android:layout_marginBottom="@dimen/margin_10">
+                <TextView
+                    android:id="@+id/active_word"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="@dimen/margin_10"
+
+                    android:textColor="@color/black_color75"
+                    android:gravity="center_horizontal|center_vertical"
+                     android:layout_weight="7"
+                    android:textSize="@dimen/sp_16"
+                 />
+
+                <ImageView
+                    android:id="@+id/active"
+                    android:layout_width="0dp"
+                    android:src="@drawable/ic_check_black_24dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                   />
+                <ImageView
+                    android:id="@+id/inactive"
+                    android:src="@drawable/ic_close_black_24dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+              />
+                </LinearLayout>
+            <TextView
+                android:id="@+id/text_branch_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_10"
+                android:layout_below="@id/l1"
+                android:text="@string/branch_name"
+                android:textColor="@color/black_color75"
+                android:textSize="@dimen/sp_16"
+                android:layout_marginBottom="@dimen/margin_10"/>
+
+            <TextView
+                android:id="@+id/edit_branch_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l1"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black_color75"
+                android:gravity="center_horizontal"
+                android:layout_toRightOf="@id/text_branch_name"/>
+
+            <TextView
+                android:id="@+id/text_Stand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/standard_name"
+                android:textSize="@dimen/sp_16"
+                android:paddingLeft="@dimen/margin_10"
+                android:textColor="@color/black_color75"
+                android:layout_below="@id/text_branch_name"
+                android:layout_marginBottom="@dimen/margin_10"/>
+
+            <TextView
+                android:id="@+id/edit_Stand_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black_color75"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/text_branch_name"
+                android:layout_toRightOf="@id/text_Stand_name"/>
+            <TextView
+                android:id="@+id/text_batch_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/batch_name"
+                android:textSize="@dimen/sp_16"
+                android:paddingLeft="@dimen/margin_10"
+                android:textColor="@color/black_color75"
+                android:layout_below="@id/text_Stand_name"
+                android:layout_marginBottom="@dimen/margin_10"/>
+
+            <TextView
+                android:id="@+id/edit_batch_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_Stand_name"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black_color75"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/text_batch_name"/>
+            <TextView
+                android:id="@+id/text_subj_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:text="@string/subject_name"
+                android:textColor="@color/black_color75"
+                android:paddingLeft="@dimen/margin_10"
+                android:layout_below="@id/text_batch_name"
+                android:layout_marginBottom="@dimen/margin_10"/>
+            <TextView
+                android:id="@+id/edit_Sub_name"
+                android:layout_width="fill_parent"
+                android:layout_below="@id/text_batch_name"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/sp_16"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/black_color75"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text_subj_name"/>
+            <TextView
+                android:id="@+id/auto_id"
+                android:layout_width="fill_parent"
+                android:layout_below="@id/edit_Sub_name"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black_color75"
+                android:layout_height="30dp"
+                android:visibility="gone"
+             />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+</RelativeLayout>

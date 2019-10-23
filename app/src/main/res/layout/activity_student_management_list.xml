@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    tools:context="com.mobilesutra.feetrackerclass.activities.ActivityStudentManagementList">
+
+    <include
+        android:id="@+id/toolbar_student_management"
+        layout="@layout/toolbar_student_management" />
+
+    <EditText
+        android:id="@+id/edit_student_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_student_management"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="@string/search"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linear_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_student_search"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:background="@color/yellow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/branchloca" />
+
+        <Spinner
+            android:id="@+id/spnr_branch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/standerd" />
+
+        <Spinner
+            android:id="@+id/spnr_stand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/liner_seccond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_first"
+        android:background="@color/yellow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/bathe" />
+
+        <Spinner
+            android:id="@+id/spnr_batch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/margin_5"
+            android:src="@drawable/subjectstile" />
+
+        <Spinner
+            android:id="@+id/spnr_subject"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner_seccond"
+        android:layout_marginTop="@dimen/margin_10"/>
+
+</RelativeLayout>

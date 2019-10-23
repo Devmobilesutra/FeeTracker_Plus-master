@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/back_dash"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/margin_10"
+    android:paddingLeft="@dimen/margin_10"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title_heading"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/margin_40"
+        android:text="@string/restore_text"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/black_color75"
+        android:layout_marginBottom="@dimen/margin_10"/>
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="@string/class_config_restore"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/black_color75"
+        android:layout_marginTop="@dimen/margin_10"
+        android:clickable="false"
+        android:checked="true"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="@string/student_restore"
+        android:textSize="@dimen/sp_18"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_above="@+id/button"
+        android:clickable="false"
+        android:checked="true"
+        android:textColor="@color/black_color75"
+        android:layout_centerHorizontal="true" />
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/fee_restore"
+        android:textSize="@dimen/sp_18"
+        android:checked="true"
+        android:clickable="false"
+        android:textColor="@color/black_color75"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white"
+        android:text="@string/attendance_restore"
+        android:textSize="@dimen/sp_18"
+        android:clickable="false"
+        android:checked="true"
+        android:textColor="@color/black_color75"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40"
+        android:background="@drawable/button_book_service_yellow"
+        android:text="@string/submit"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/button_text_color"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
+
+</LinearLayout>

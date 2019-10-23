@@ -1,0 +1,103 @@
+<resources>
+    <!--<string name="app_name">Fee Tracker Plus</string>-->
+
+    <!--<string name="hello_world">Hello world!</string>-->
+    <!--<string name="action_settings">Settings</string>-->
+    <!--<string name="select_birthdate">Select Date of Birth</string>-->
+    <!--<string name="Date">Date</string>-->
+    <!--<string name="FeesPaid">FeesPaid</string>-->
+    <!--<string name="Balance">Balance</string>-->
+    <!--<string name="Subject">Subject</string>-->
+    <!--<string name="Bal">Balance :</string>-->
+    <!--<string name="Remark">Remark :-</string>-->
+    <!--<string name="AddFee">Add Fee</string>-->
+    <!--<string name="EditFee">Edit Fee</string>-->
+
+    <!--<string name="full_name">Full Name</string>-->
+    <!--<string name="change_Password">Change Password</string>-->
+    <!--<string name="email_id">Email id</string>-->
+    <!--<string name="mobile_no">Mobile number</string>-->
+    <!--<string name="account_exp">Account expiration</string>-->
+    <!--<string name="update_profile">UPDATE PROFILE</string>-->
+    <!--<string name="personal_profile">Personal Profile</string>-->
+    <!--<string name="define_class">Create  A  Class</string>-->
+
+
+    <!--<string name="branch">Branches / Location</string>-->
+    <!--<string name="Level">Level /Standard</string>-->
+    <!--<string name="subject">Subject /Styles</string>-->
+    <!--<string name="batch">Batches</string>-->
+    <!--<string name="addloc">add Location</string>-->
+    <!--<string name="addlevel">add Level</string>-->
+    <!--<string name="addsubj">add Subject</string>-->
+    <!--<string name="addbatch">add Batch</string>-->
+
+    <!--<string name="title_activity_activity_profile">Activity_profile</string>-->
+    <!--<string name="title_activity_product_profile">ProductTour3Activity</string>-->
+
+
+    <!--<string name="info_1text1">FEE</string>-->
+    <!--<string name="info_1text2">MANAGEMENT</string>-->
+    <!--<string name="info_1text3">was not that esay before...</string>-->
+    <!--<string name="info_2text1">EASY</string>-->
+    <!--<string name="info_2text2">"COMMUNICATION &#038; ATTENDANCE"</string>-->
+    <!--<string name="info_2text3">management</string>-->
+    <!--<string name="info_3text1">ONE-CLICK</string>-->
+    <!--<string name="info_3text2">"BACKUP &#038; RESTORE"</string>-->
+    <!--<string name="info_3text3">facility</string>-->
+    <!--<string name="title_activity_acticity__profile_main">Acticity_Profile_main</string>-->
+    <!--<string name="title_activity_activity_class_profile">Activity_class_profile</string>-->
+    <!--<string name="title_activity_activity_profile_new">Activity_profileNew</string>-->
+    <!--<string name="title_activity_click">ClickActivity</string>-->
+
+<!--&lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
+    <!--<string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <!--<string name="title_activity_click_activity2">Click_activity2</string>-->
+    <!--<string name="title_activity_click__step_">Click_Step_Activity</string>-->
+
+    <!--<string name="info_1">In Class Profile , you need to enter details of the class like Branch names , subjects or styles (Mathematics ,Tabla, Guitar , Zumba Dance etc)  , batch names (morning , 10 to 11 etc) and standard (XI, intermediate , Hobbies etc).Then App generates all possible combinations of the batches . You need to Activate relevant  batches from this list. You also need to define Fees for each combination of subjects.</string>-->
+    <!--<string name="info_2"> You can enter each installment of the student .The summery report will help you analyse subject wise balance fees .</string>-->
+    <!--<string name="info_3"> You can select individual student for sending custimized text message.</string>-->
+    <!--<string name="info_4">Enroll the students for respective batches . You can edit or delete any students. </string>-->
+    <!--<string name="info_5">To give better experience , we have given feature wise back up. This is to ensure that you are not tied while taking full backup. </string>-->
+    <!--<string name="info_6">While taking attendance RED icon will indicate unpaid fees by corresponding student.</string>-->
+    <!--<string name="info_cls1">Keep a watch on expiry of the licence. Contact sbsupport@mobilesutra.com for licence renewal. </string>-->
+    <!--<string name="info_cls2">    Enter all branch names , batch names, standard names and subject names .</string>-->
+    <!--<string name="info_cls3">App generates all combination of batches considering all branches , subjects , standards etc. You need to select only those batches which are active.</string>-->
+    <!--<string name="title_activity_add_student">addStudent</string>-->
+    <!--<string name="title_activity_add__fee">Add_Fee</string>-->
+    <!--<string name="title_activity_send_sms">Send_sms</string>-->
+    <!--<string name="title_activity_add_attendance">Add_attendance</string>-->
+    <!--<string name="title_activity_teacher_homework">TeacherHomework</string>-->
+    <!--<string name="title_activity_backup">Backup</string>-->
+    <!--<string name="title_activity_backup__new">Backup_New</string>-->
+
+    <!--//login-->
+    <!--<string name="login_username">वापरकर्ता नाव:</string>-->
+    <!--<string name="login_Password">पासवर्ड :</string>-->
+    <!--<string name="login_ShowPassword">संकेतशब्द दर्शवा</string>-->
+    <!--<string name="login">लॉगिन</string>-->
+    <!--<string name="cancel">रद्द</string>-->
+    <!--<string name="RegisterForTrial">चाचणी नोंदणी </string>-->
+    <!--<string name="forgotpassword">पासवर्ड विसरला</string>-->
+<!--//register-->
+    <!--<string name="Registration">Registration</string>-->
+    <!--<string name="eneter_class_name">Enter Class Name"</string>-->
+    <!--<string name="EnterEmailID">Enter EmailID</string>-->
+    <!--<string name="EnterContactNo">Enter Contact No.</string>-->
+    <!--<string name="Enteraddress">Enter address</string>-->
+    <!--<string name="Entercity">Enter city </string>-->
+    <!--<string name="description">Enter description about your Institute </string>-->
+
+    <!--//dashbord-->
+
+    <!--<string name="classprofile">CLASS PROFILE</string>-->
+    <!--<string name="feemanagent">FEE MANAGEMENT"</string>-->
+    <!--<string name="sendsms">SEND SMS</string>-->
+    <!--<string name="studmanagement">STUDENT MANAGEMENT</string>-->
+    <!--<string name="backup">BACKUP &#038; RESTORE</string>-->
+    <!--<string name="attendance">ATTENDANCE </string>-->
+
+
+
+</resources>

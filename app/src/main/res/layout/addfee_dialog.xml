@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    android:padding="@dimen/margin_10"
+
+    android:orientation="vertical" >
+
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_fee"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@dimen/sp_22"
+        />
+
+    <EditText
+        android:id="@+id/ammount"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_40"
+        android:ems="10"
+
+        android:layout_marginTop="@dimen/margin_20"
+        android:hint="@string/enter_fees_amount"
+        android:textColorHint="@color/black_color85"
+        android:background="@drawable/border_black"
+        android:paddingLeft="@dimen/margin_15"
+        android:inputType="number" >
+
+        <!--<requestFocus />-->
+    </EditText>
+
+
+
+    <TextView
+        android:id="@+id/paid_date"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_40"
+        android:background="@drawable/border_black"
+        android:textColor="@color/black_color85"
+        android:drawableRight="@drawable/time"
+        android:paddingRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="@dimen/sp_18"
+    >
+
+    <!--<requestFocus />-->
+    </TextView>
+
+    <TextView
+        android:id="@+id/pay"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_40"
+        android:text="@string/payment_status"
+        android:background="@android:color/transparent"
+        android:textColor="@color/black_color75"
+
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="start|center"
+        android:textSize="@dimen/sp_18"
+        />
+    <RadioGroup
+        android:id="@+id/payment"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_40"
+
+        android:weightSum="90"
+
+        android:textColor="@color/white"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/cash"
+            android:layout_height="35dp"
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:text="@string/cash"
+            android:textColor="@color/black_color75"/>
+        <RadioButton
+            android:id="@+id/chaque"
+            android:layout_height="35dp"
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:text="@string/cheque"
+            android:textColor="@color/black_color75"/>
+        <RadioButton
+            android:id="@+id/online"
+            android:layout_height="35dp"
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:text="@string/online"
+            android:textColor="@color/black_color75"/>
+
+
+        </RadioGroup>
+
+    <EditText
+        android:id="@+id/cash_no"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_40"
+
+        android:background="@drawable/border_black"
+        android:textColor="@color/black_color85"
+        android:hint="@string/enter_cheque_number"
+        android:textColorHint="@color/black_color85"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center|start"
+        android:paddingLeft="@dimen/margin_10"
+        android:textSize="@dimen/sp_18"
+        android:visibility="gone"
+        />
+
+    <EditText
+        android:id="@+id/remark"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_40"
+        android:ems="10"
+        android:layout_marginTop="@dimen/margin_20"
+        android:hint="@string/enter_remark"
+        android:textColorHint="@color/black_color85"
+        android:background="@drawable/border_black"
+        android:paddingLeft="@dimen/margin_15"
+        android:inputType="textPersonName" />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:weightSum="3"
+
+        android:layout_marginTop="@dimen/margin_40"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/collectfee"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:textColor="@color/heading_text_color"
+            android:text="@string/collect_fee"
+            android:background="@drawable/button_book_service_yellow"
+            />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:text="@string/Cancel"
+            android:textColor="@color/heading_text_color"
+            android:background="@drawable/button_book_service_yellow"
+            />
+        </LinearLayout>
+
+
+</LinearLayout>

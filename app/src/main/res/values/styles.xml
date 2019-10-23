@@ -1,0 +1,79 @@
+<resources>
+
+    <style name="yellow" parent="@android:style/TextAppearance">
+        <item name="android:textColorHint">@color/main_orange</item>
+        <item name="colorControlNormal">@color/main_orange</item>
+        <item name="colorControlActivated">@color/main_orange</item>
+        <item name="colorControlHighlight">@color/main_orange</item>
+    </style>
+    <style name="black" parent="@android:style/TextAppearance">
+        <item name="android:textColorHint">@color/black</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+
+    </style>
+    <style name="radio_white" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+         Customize your theme here.
+        <item name="android:textColorHint">@color/black_color85</item>
+        <item name="colorControlNormal">@color/black_color85</item>
+        <item name="colorControlActivated">@color/black_color85</item>
+        <item name="colorControlHighlight">@color/black_color85</item>
+
+    </style>
+
+    <style name="Theme.App.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+      <item name="android:textColor">@color/black_color75</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout1" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black_color75</item>
+        <item name="android:textColorHint">@color/black_color75</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TableTextView">
+        <item name="android:layout_margin">1dp</item>
+    </style>
+    <style name="ToolBarStyle" parent="">
+        <item name="android:elevation">@dimen/toolbar_elevation</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:textColorPrimary">@color/selected_gray</item>
+    </style>
+
+    <style name="WelcomeHeadingAppearance" parent="@android:style/TextAppearance.Large">
+        <item name="android:textSize">24.0sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="WelcomeContentAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">24.0sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="Theme.Translucent" parent="android:style/Theme.Translucent">
+        <item name="android:windowBackground">@drawable/translucent_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorForeground">#fff</item>
+    </style>
+
+
+</resources>

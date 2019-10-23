@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    tools:context="com.mobilesutra.feetrackerclass.activities.ActivityDashboard">
+
+    <include
+        android:id="@+id/toolbar_actionbar1"
+        layout="@layout/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_actionbar1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.mobilesutra.feetrackerclass.activities.ActivityDashboard">
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/htwt"
+                    android:layout_margin="@dimen/fab_actions_spacing"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:elevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="@dimen/card_corner_radius">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_management"
+                            android:layout_margin="@dimen/fab_actions_spacing"
+                            android:src="@drawable/profile" />
+
+                        <TextView
+                            android:id="@+id/txt_management"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/fab_actions_spacing"
+                            android:text="@string/classprofile"
+                            android:textSize="@dimen/sp_12" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_student_management"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/htwt"
+                    android:layout_margin="@dimen/fab_actions_spacing"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:elevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="@dimen/card_corner_radius">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_student_management"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_student_management"
+                            android:layout_margin="@dimen/fab_actions_spacing"
+                            android:src="@drawable/student" />
+
+                        <TextView
+                            android:id="@+id/txt_student_management"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/fab_actions_spacing"
+                            android:singleLine="true"
+                            android:text="@string/studmanagement"
+                            android:textSize="@dimen/sp_12" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_send_sms"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/htwt"
+                    android:layout_margin="@dimen/fab_actions_spacing"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:elevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="@dimen/card_corner_radius">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_send_sms"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_send_sms"
+                            android:layout_margin="@dimen/fab_actions_spacing"
+                            android:src="@drawable/sendsms" />
+
+                        <TextView
+                            android:id="@+id/txt_send_sms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/fab_actions_spacing"
+                            android:text="@string/sendsms"
+                            android:textSize="@dimen/sp_12" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--Fee Management-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_fee_management"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/htwt"
+                    android:layout_margin="@dimen/fab_actions_spacing"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:elevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="@dimen/card_corner_radius">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_fee_management"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_management22"
+                            android:layout_margin="@dimen/fab_actions_spacing"
+                            android:src="@drawable/fee" />
+
+                        <TextView
+                            android:id="@+id/txt_management22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/fab_actions_spacing"
+                            android:text="@string/feemanagent"
+                            android:textSize="@dimen/sp_12" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_get_help"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/htwt"
+                    android:layout_margin="@dimen/fab_actions_spacing"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:elevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="@dimen/card_corner_radius">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_get_help"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_get_help"
+                            android:layout_margin="@dimen/fab_actions_spacing"
+                            android:src="@drawable/student_new2" />
+
+                        <TextView
+                            android:id="@+id/txt_get_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/fab_actions_spacing"
+                            android:text="@string/backup"
+                            android:textSize="@dimen/sp_12" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_attendance"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/htwt"
+                    android:layout_margin="@dimen/fab_actions_spacing"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:elevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="@dimen/card_corner_radius">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_attendance"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/txt_management32"
+                            android:layout_margin="@dimen/fab_actions_spacing"
+                            android:src="@drawable/attendance" />
+
+                        <TextView
+                            android:id="@+id/txt_management32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/fab_actions_spacing"
+                            android:text="@string/attendance"
+                            android:textSize="@dimen/sp_12" />
+                    </RelativeLayout>t
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/abc_action_bar_default_height_material"
+    android:background="?attr/colorPrimary"
+    android:minHeight="@dimen/abc_action_bar_default_height_material">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/img_search"
+        android:layout_toStartOf="@+id/img_search"
+        android:paddingLeft="@dimen/drawer_menu_paddingLR"
+        android:paddingStart="@dimen/drawer_menu_paddingLR"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_class_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/class_mgmt"
+        android:textAllCaps="true"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/heading_text_color"
+        android:textSize="@dimen/sp_22" />
+
+    <TextView
+        android:id="@+id/txt_activity_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gggggg"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textColor="@color/heading_text_color"
+        android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/drawer_menu_padding"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/str_content_description"
+        android:src="@drawable/search_black"/>
+
+</RelativeLayout>

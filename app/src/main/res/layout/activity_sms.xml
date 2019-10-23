@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    tools:context="com.mobilesutra.feetrackerclass.activities.ActivitySMS">
+
+    <include
+        android:id="@+id/toolbar_send_sms"
+        layout="@layout/toolbar_send_sms" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar_send_sms"
+        android:layout_above="@+id/btnBuy">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayoutSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_send_sms"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:id="@+id/linear_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:background="@color/yellow"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/branchloca" />
+
+                    <Spinner
+                        android:id="@+id/spnr_branch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.0" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/standerd" />
+
+                    <Spinner
+                        android:id="@+id/spnr_stand"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_seccond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_first"
+                    android:background="@color/yellow"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/bathe" />
+
+                    <Spinner
+                        android:id="@+id/spnr_batch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.0" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:padding="@dimen/margin_5"
+                        android:src="@drawable/subjectstile" />
+
+                    <com.mobilesutra.feetrackerclass.activities.MultiSelectionSpinner
+                        android:id="@+id/mspnr_subject"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.0" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_seccond"
+                    android:layout_margin="1sp"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/enter_notice"
+                    android:text=""
+                    android:textColor="@color/black_color75"
+                    android:textColorHint="@color/black_color75"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/noticecharcount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/notice"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/char_count"
+                    android:textColor="@color/black_color75"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_student"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_book_service_yellow"
+        android:text="@string/send"
+        android:textColor="@color/button_text_color"
+        android:textSize="16sp"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/btnFreeSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_5"
+        android:background="@drawable/button_book_service_yellow"
+        android:text="@string/send"
+        android:textColor="@color/button_text_color"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dash"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/container_header"
+        layout="@layout/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <TextView
+    android:id="@+id/text1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+
+    android:layout_below="@+id/container_header"
+    android:layout_alignParentLeft="true"
+    android:text="@string/Student_list"
+    android:textSize="20sp"
+    android:textColor="@color/white"/>
+
+
+    <!--<TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/container_header"
+        android:background="#f2edba"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Student List"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/button" />-->
+
+
+    <!--<Button-->
+        <!--android:id="@+id/selectPresent"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:background="@drawable/button_book_service_yellow"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:text="Select to Present"-->
+        <!--android:layout_below="@+id/container_header"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
+    <Switch
+        android:id="@+id/selectPresent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+
+        android:textColor="@color/white"
+        android:textOn="@string/Absent"
+        android:textOff="@string/Present"
+        android:layout_below="@+id/container_header"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectPresent"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="@string/search"
+        android:theme="@style/yellow"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white">
+    </EditText>
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearlayout1"
+        android:layout_below="@+id/search"
+        android:dividerHeight="1dp"
+        android:divider="@color/grey_500"
+        android:layout_marginTop="5sp"
+        android:paddingBottom="5dp" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:padding="2dp" >
+
+        <Button
+            android:id="@+id/SendWothoutsms"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_book_service_yellow"
+            android:textColor="@color/white"
+            android:text="@string/send_without_sms" />
+
+        <Button
+            android:id="@+id/Send"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:textColor="@color/white"
+            android:background="@drawable/button_book_service_yellow"
+            android:text="@string/send_with_sms" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/margin_10"
+    android:paddingLeft="@dimen/margin_10"
+    android:paddingRight="@dimen/margin_10">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        card_view:cardElevation="15dp"
+        card_view:cardCornerRadius="@dimen/card_corner_radius"
+        android:elevation="0dp">
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/rel1"
+            android:background="@color/white">
+
+
+            <!--<ImageView
+                android:id="@+id/icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_person_grey600_24dp"></ImageView>"
+-->
+
+
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/l1"
+                >
+                <TextView
+                    android:id="@+id/branch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="branraanchhhhhh"
+                    android:textSize="16sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="2dp"
+                    android:textColor="@color/black_color75"
+                    />
+                <TextView
+                    android:id="@+id/stand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="standstandstand"
+                    android:layout_toRightOf="@+id/branch"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_color75"
+                    />
+                <TextView
+                    android:id="@+id/batch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="batcatch"
+                    android:layout_toRightOf="@+id/stand"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_color75"
+                    />
+
+
+
+            </RelativeLayout>
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/l1"
+                android:weightSum="10"
+                android:id="@+id/fee"
+
+                >
+                <TextView
+                    android:id="@+id/subjects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="30dp30dp30dp"
+                    android:layout_toRightOf="@+id/batch"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="2dp"
+                    android:textColor="@color/black_color75"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+            <!--<ImageView
+                android:id="@+id/img_phone1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/stud_phone"
+                android:paddingRight="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/call"/>-->
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:id="@+id/l2"
+                android:weightSum="10"
+                android:layout_below="@+id/fee"
+                android:background="@color/selected_gray"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="7"
+                    android:textColor="@color/black_color75">
+
+                    <TextView
+                        android:id="@+id/text_total_fees"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black_color75"
+                        android:layout_weight="3.5"
+                        android:gravity="left|center_horizontal|center_vertical"
+                        android:textSize="16sp"
+                        android:text="@string/total_fee"
+                        android:layout_marginLeft="10dp"/>
+                    <TextView
+                        android:id="@+id/total_fee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black_color75"
+                        android:layout_weight="3.5"
+                        android:gravity="left|center_horizontal|center_vertical"
+                        android:textSize="16sp"
+                        android:text="@string/Total_fee"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/img_fee_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/margin_5"
+                    android:layout_weight="1.5"
+                    android:layout_toLeftOf="@+id/img_delete"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_create_black_24dp"/>
+
+
+
+                <ImageView
+                    android:id="@+id/img_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                     android:padding="@dimen/margin_5"
+                    android:layout_weight="1.5"
+
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/remove"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <View android:layout_height="@dimen/margin_5"
+            android:layout_width="fill_parent"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/rel1">
+        </View>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
